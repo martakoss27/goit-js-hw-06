@@ -5,12 +5,9 @@ const outputName = document.querySelector("#name-output");
 console.log(inputName.value);
 console.log(outputName.textContent);
 
-//function updateName() {
-//if (inputName.value !== "") {
-//  inputName.value = outputName.textContent;
-//} else {
-// outputName.textContent = "Anonymous";
-//}
-//}
+const nameInputEvent = (event) => {
+  const inputValue = event.currentTarget;
+  outputName.textContent = inputValue.value ? inputValue.value : "Anonymous";
+};
 
-// inputName.addEventListener("input", updateName);
+inputName.addEventListener("input", nameInputEvent);
