@@ -3,7 +3,7 @@ console.log(form);
 //If the form has empty fields,
 //display alert saying that all fields must be filled in.
 function validateForm() {
-  if (form.email.value === "" && form.password.value === "") {
+  if (form.email.value === "" || form.password.value === "") {
     alert("Please Fill In All Required Fields");
     return;
   }
